@@ -1,0 +1,14 @@
+{%extends 'testApp/base.html'%}
+{%block content%}
+
+<div class="container" align = "center">
+  <h1>Are you sure ? you want to delete {{employee.ename}} record</h1>
+  <form  method="post">{%csrf_token%}
+    <input type="submit" name="response" class="btn btn-danger" value="YES">
+    <input type="submit" name="response" class="btn btn-warning" value="NO">
+  </form>
+
+
+</div>
+
+{%endblock%}
